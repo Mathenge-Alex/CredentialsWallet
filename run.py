@@ -54,11 +54,17 @@ def main():
                 print("Do you want CWallet to generate a passKey for You or Your Own Password?")
                 keyOption = input("Y :Generate for me \t N : Own passKey").upper()
                 if keyOption == 'Y':
-                    salt = random.randrange(127, 309)
+                    salt = str(random.randrange(127, 309))
                     passKey = accountName.join(salt)
+
                 else:
                     passKey = input("Enter Your PassKey: ")
-            save_credential(create_credential(applicationName, accountName, passKey))
+
+                save_credential(create_credential(applicationName, accountName, passKey))
+                print(f"\n{accountName} Credentials Saved successfully")
+
+
+
 
 
 
