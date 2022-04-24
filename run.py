@@ -27,6 +27,10 @@ def find_credential(applicationName):
     return Credential.search_name(applicationName)
 
 
+def show_credential():
+    return Credential.show_credentials()
+
+
 def main():
     print(f"\n Use Credential Wallet (CWallet) is a safe vault for all your online passwords. \n"
           f"\n"
