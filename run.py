@@ -72,6 +72,19 @@ def main():
                 save_credential(create_credential(applicationName, accountName, passKey))
                 print(f"\n{accountName} Credentials Saved successfully")
 
+            elif option == 'F':
+                print(f"Enter the Application Name You Want to Search For")
+                search = input("Enter the Application's Name: ")
+                if find_credential(query):
+                    query = find_credential(search)
+                    print(f"Here are the results\n"
+                          f"Application Name: {query.applicationName}\n"
+                          f"Username: {query.accountName}\n"
+                          f"Password: {query.passkey}\n")
+                else:
+                    print(f"The credential {search} does not exist!")
+
+
 
 if __name__ == '__main__':
     main()
