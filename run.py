@@ -11,15 +11,20 @@ def create_account(username, password):
 def save_account(User):
     User.save_account()
 
+    #     Credentials
 
-        #     Credentials
+
 def create_credential(applicationName, accountName, passKey):
-    new_credential = Credential (applicationName, accountName, passKey)
-    return  new_credential
+    new_credential = Credential(applicationName, accountName, passKey)
+    return new_credential
 
 
 def save_credential(Credentials):
     Credential.save_credentials()
+
+
+def find_credential(applicationName):
+    return Credential.search_name(applicationName)
 
 
 def main():
@@ -62,10 +67,6 @@ def main():
 
                 save_credential(create_credential(applicationName, accountName, passKey))
                 print(f"\n{accountName} Credentials Saved successfully")
-
-
-
-
 
 
 if __name__ == '__main__':
