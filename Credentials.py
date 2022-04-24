@@ -14,3 +14,8 @@ class Credential:
         for Credent in cls.vault:
             if Credent.applicationName == appName:
                 return Credential
+
+    @classmethod
+    def show_credentials(cls):
+        return cls.vault
+
