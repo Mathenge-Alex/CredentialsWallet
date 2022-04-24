@@ -58,10 +58,12 @@ def main():
             option = input("Type your Selection here: ")
             if option == 'C':
                 print(f"Creating a new Credential\n")
-                applicationName = input("Enter the application name: ")
-                accountName = input("Enter the application PassKey: ")
+                applicationName = input()
+                print("Enter the application name: ")
+                accountName = input()
+                print("Enter the application PassKey: ")
                 print("Do you want CWallet to generate a passKey for You or Your Own Password?")
-                keyOption = input("Y :Generate for me \t N : Own passKey").upper()
+                keyOption = input("Y :Generate for me \t N : Own passKey ").upper()
                 if keyOption == 'Y':
                     salt = str(random.randrange(127, 309))
                     passKey = accountName.join(salt)
@@ -73,7 +75,7 @@ def main():
                 print(f"\n{accountName} Credentials Saved successfully")
 
             elif option == 'F':
-                print(f"Enter the Application Name You Want to Search For")
+                print(f"Enter the Application Name You Want to Search For: ")
                 search = input("Enter the Application's Name: ")
                 if find_credential(query):
                     query = find_credential(search)
@@ -83,7 +85,6 @@ def main():
                           f"Password: {query.passkey}\n")
                 else:
                     print(f"The credential {search} does not exist!")
-
 
 
 if __name__ == '__main__':
