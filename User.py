@@ -1,6 +1,3 @@
-from typing import Dict, Any
-
-
 class CAUser:
     user_account = []
 
