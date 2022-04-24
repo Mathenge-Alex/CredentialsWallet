@@ -19,6 +19,7 @@ def create_credential(applicationName, accountName, passKey):
 
 
 def save_credential(Credentials):
+    Credential.save_credentials()
 
 
 def main():
