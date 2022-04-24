@@ -18,8 +18,8 @@ def main():
         print("Enter your Preferred CWallet username: ")
         userName = input()
         print("Enter your Preferred CWallet password: ")
-        user_password = input()
-        save_account(create_account(userName, password))
+        Password = input()
+        save_account(create_account(userName, Password))
 
         print(f"\n Welcome to CWallet. Your account ${userName} has been created. "
               f"\n Please LOGIN to START storing your credentials")
