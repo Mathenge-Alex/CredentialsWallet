@@ -1,6 +1,6 @@
-import Credentials
 from User import CAUser
 from Credentials import Credential
+import random
 
 
 def create_account(username, password):
@@ -10,6 +10,8 @@ def create_account(username, password):
 
 def save_account(User):
     User.save_account()
+
+
 
 
 def main():
@@ -36,7 +38,20 @@ def main():
                   f"S : Show Existing Credentials \n"
                   f"F : Find a Credential by Application Name"
                   f"D : Delete a credential")
-            choice = input("Type your Selection here: ")
+            option = input("Type your Selection here: ")
+            if option == 'C':
+                print(f"Creating a new Credential\n")
+                applicationName = input("Enter the application name: ")
+                accountName = input("Enter the application PassKey: ")
+                print("Do you want CWallet to generate a passKey for You or Your Own Password?")
+                keyOption = input("Y :Generate for me \t N : Own passKey").upper()
+                if keyOption == 'Y':
+                    salt = random.randrange(127, 309)
+                    passKey = accountName.join(salt)
+                else:
+                    passKey = input("Enter Your PassKey: ")
+            save_credential(create_credential(applicationName, accountName, passKey))
+
 
 
 if __name__ == '__main__':

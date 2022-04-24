@@ -1,11 +1,10 @@
 class Credential:
-    credentsList = []
+    credentialsList = []
 
-    def __init__(self, applicationName, username, password):
+    def __init__(self, applicationName, accountName, passKey):
         self.applicationName = applicationName
-        self.username = username
-        self.password = password
+        self.accountName = accountName
+        self.passKey = passKey
 
-    def saveCredential(self):
+    def save_credentials(self):
         Credential.credentsList.append(self)
-
