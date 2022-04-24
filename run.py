@@ -12,6 +12,13 @@ def save_account(User):
     User.save_account()
 
 
+        #     Credentials
+def create_credential(applicationName, accountName, passKey):
+    new_credential = Credential (applicationName, accountName, passKey)
+    return  new_credential
+
+
+def save_credential(Credentials):
 
 
 def main():
