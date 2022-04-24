@@ -4,44 +4,48 @@ from Credentials import Credential
 
 
 def create_account(username, password):
-    new_account = CAUser(username, password)
+    new_account = CAUser()
     return new_account
 
 
 def save_account(User):
     User.save_account()
 
+
 def main():
-        print(f"\n Use Credential Wallet (CWallet) is a safe vault for all your online passwords. \n"
+    print(f"\n Use Credential Wallet (CWallet) is a safe vault for all your online passwords. \n"
           f"\n"
           f"\n Create an account With Us to store your passwords.\n \n")
-        print("Enter your Preferred CWallet username: ")
-        userName = input()
-        print("Enter your Preferred CWallet password: ")
-        Password = input()
-        save_account(create_account(userName, Password))
+    print("Enter your Preferred CWallet username: ")
+    userName = input()
+    print("Enter your Preferred CWallet password: ")
+    passWord = input()
+    save_account(create_account(userName, passWord))
 
-        print(f"\n Welcome to CWallet. Your account ${userName} has been created. "
-              f"\n Please LOGIN to START storing your credentials")
-        print("\n Enter Your CWallet Username: ")
-        user_name = input()
-        print("\n Enter Your CWallet Password: ")
-        user_password = input()
+    print(f"\n Welcome to CWallet. Your account {userName} has been created. "
+          f"\n Please LOGIN to START storing your credentials")
+    print("\n Enter Your CWallet Username: ")
+    user_name = input()
+    print("\n Enter Your CWallet Password: ")
+    user_password = input()
 
+    while True:
+        if userName == user_name:
+            print(f"welcome {user_name}. Type :=>:\n"
+                  f"C : Store New Credentials \n"
+                  f"S : Show Existing Credentials \n"
+                  f"F : Find a Credential by Application Name"
+                  f"D : Delete a credential")
+            choice = input("Type your Selection here: ")
 
 
 if __name__ == '__main__':
     main()
 
-
     # save_account()
-
 
 # menu = ""
 # while menu != "1" or menu != "2":
-
-
-
 
 
 # def new_user(self, username, password):
