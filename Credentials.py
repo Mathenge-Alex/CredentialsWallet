@@ -1,5 +1,5 @@
 class Credential:
-    credentialsList = []
+    vault = []
 
     def __init__(self, applicationName, accountName, passKey):
         self.applicationName = applicationName
@@ -7,4 +7,10 @@ class Credential:
         self.passKey = passKey
 
     def save_credentials(self):
-        Credential.credentsList.append(self)
+        Credential.vault.append(self)
+
+    @classmethod
+    def search_name(cls, appName):
+        for Credent in cls.vault:
+            if Credent.applicationName == appName:
+                return Credential
