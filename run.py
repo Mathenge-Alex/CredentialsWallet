@@ -108,6 +108,10 @@ def main():
                 else:
                     print(f"The Credential \"{to_delete_appName}\" You want to delete does not exist")
 
+            #         Exit From the CWallet App
+            elif option =='E':
+                print(f"It was great serving you {userName} for esteeming CWallet with your passwords. \n \t\t See You Later!")
+
 
 
 
