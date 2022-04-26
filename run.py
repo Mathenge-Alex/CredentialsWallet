@@ -51,8 +51,9 @@ def main():
             print(f"welcome {user_name}. Type :=>:\n"
                   f"C : Store New Credentials \n"
                   f"S : Show Existing Credentials \n"
-                  f"F : Find a Credential by Application Name"
-                  f"D : Delete a credential")
+                  f"F : Find a Credential by Application Name\n"
+                  f"D : Delete a Credential\n"
+                  f"E : Exit The Cwallet App\n")
             option = input("Type your Selection here: ").upper()
 
             # Create a New credential
@@ -111,10 +112,13 @@ def main():
             #         Exit From the CWallet App
             elif option =='E':
                 print(f"It was great serving you {userName} for esteeming CWallet with your passwords. \n \t\t See You Later!")
+                break
 
             # When a wrong Entry is made.
             else:
                 print("You have Made an Invalid Entry. Please Try Again")
+        else:
+            print("Wrong Username or Password. Please Try Again or Create an account if Not Yet")
 
 
 if __name__ == '__main__':
