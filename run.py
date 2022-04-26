@@ -99,7 +99,16 @@ def main():
                           "Select 'C' to store new credentials")
 
             #         Delete Credential function
-            # elif option == 'D':
+            elif option == 'D':
+                to_delete_appName = input("Enter the app name of Credential To Delete")
+                if find_credential(to_delete_appName):
+                    to_delete = find_credential(to_delete_appName)
+                    Credential.delete_credential(to_delete)
+                    print(f"Your {to_delete_appName} Account has Been deleted successfully")
+                else:
+                    print(f"The Credential \"{to_delete_appName}\" You want to delete does not exist")
+
+
 
 
 if __name__ == '__main__':
