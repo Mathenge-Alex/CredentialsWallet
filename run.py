@@ -112,7 +112,9 @@ def main():
             elif option =='E':
                 print(f"It was great serving you {userName} for esteeming CWallet with your passwords. \n \t\t See You Later!")
 
-
+            # When a wrong Entry is made.
+            else:
+                print("You have Made an Invalid Entry. Please Try Again")
 
 
 if __name__ == '__main__':
