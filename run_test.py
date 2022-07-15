@@ -1,12 +1,14 @@
 import unittest
+from unittest import result
 
 import User
 from Credentials import Credential
 
 
 class runTests(unittest.TestCase):
-    def setUp(self) -> None:
-        self.new_account = Credential("arx", "mna")
+    def test_setUp(self) -> None:
+        self.new_account = Credential("arx", "mna", "A1234")
+        # self.assertEqual(result, "arx", "mna", "A1234")
 
     def init_test(self):
         '''
@@ -31,7 +33,7 @@ class runTests(unittest.TestCase):
 
     def show_user_test(self):
         self.assertEqual((Credential.show_credentials(), Credential.vault))
-
+    
 
 if __name__ == '__main__':
     unittest.main()
